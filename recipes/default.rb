@@ -5,7 +5,7 @@ remote_file magerun_path do
   path magerun_path
   owner 'root'
   group 'root'
-  mode '0755'
+  mode '0775'
   backup false
   action :nothing
 end.run_action(:create)
@@ -19,17 +19,17 @@ if node['n98-magerun']['auto_update']
 end
 
 directory node['n98-magerun']['source_dir'] do
-    mode "0775"
-    owner "root"
-    group "root"
+    mode "0777"
+    owner "ubuntu"
+    group "ubuntu"
     action :create
     recursive true
 end
 
 directory node['n98-magerun']['modules_dir'] do
-    mode "0775"
-    owner "root"
-    group "root"
+    mode "0777"
+    owner "ubuntu"
+    group "ubuntu"
     action :create
     recursive true
 end
