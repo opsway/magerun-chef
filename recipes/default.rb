@@ -20,16 +20,16 @@ end
 
 directory node['n98-magerun']['source_dir'] do
     mode "0777"
-    owner "ubuntu"
-    group "ubuntu"
+    owner "root"
+    group "root"
     action :create
     recursive true
 end
 
 directory node['n98-magerun']['modules_dir'] do
     mode "0777"
-    owner "ubuntu"
-    group "ubuntu"
+    owner "root"
+    group "root"
     action :create
     recursive true
 end
@@ -38,8 +38,8 @@ git node['n98-magerun']['source_dir'] do
    repository node['n98-magerun']['git_url']
    revision node['n98-magerun']['git_revision']
    action :sync
-   user "ubuntu"
-   group "ubuntu"
+   user "root"
+   group "root"
 end
 
 bash 'install_n98-magerun_autocomplete' do

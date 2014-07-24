@@ -9,8 +9,8 @@ node['n98-magerun']['modules_list'].each do |moduleName, moduleSource|
 
     directory module_path do
         mode "0775"
-        owner "ubuntu"
-        group "ubuntu"
+        owner "root"
+        group "root"
         action :create
     end
 
@@ -18,8 +18,8 @@ node['n98-magerun']['modules_list'].each do |moduleName, moduleSource|
         repository moduleSource
         revision "master"
         action :sync
-        user "ubuntu"
-        group "ubuntu"
+        user "root"
+        group "root"
     end
 
 end
