@@ -1,3 +1,5 @@
+package "git"
+
 magerun_path = "#{node['n98-magerun']['install_dir']}/#{node['n98-magerun']['install_file']}"
 
 remote_file magerun_path do
